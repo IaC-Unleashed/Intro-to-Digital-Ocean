@@ -1,0 +1,2 @@
+ssh_key_fingerprint = "[fingerprint_from_do]"
+do_token = "[personal_access_token]"
