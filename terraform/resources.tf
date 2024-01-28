@@ -2,6 +2,10 @@ data "digitalocean_ssh_key" "pixelbook" {
   name = "pixelbook"
 }
 
+data "digitalocean_project" "iac_unleashed" {
+  name = "IaC Unleashed"
+}
+
 resource "digitalocean_droplet" "iac_test_server" {
   image  = var.droplet_image
   name   = "iac-test-server"
@@ -15,14 +19,21 @@ resource "digitalocean_droplet" "iac_test_server" {
   ]
 }
 
+resource "digitalocean_project_resources" "iac_unleashed_project" {
+  project = data.digitalocean_project.iac_unleashed.id
+  resources = [
+    digitalocean_droplet.iac_test_server.urn
+  ]
+}
+
 resource "digitalocean_firewall" "iac_test_firewall" {
-  name        = "iac-test-firewall"
+  name = "iac-test-firewall"
 
   droplet_ids = [digitalocean_droplet.iac_test_server.id]
 
   inbound_rule {
-    protocol   = "tcp"
-    port_range = "22"
+    protocol         = "tcp"
+    port_range       = "22"
     source_addresses = ["0.0.0.0/0", "::/0"]
   }
 
@@ -56,7 +67,7 @@ resource "digitalocean_firewall" "iac_test_firewall" {
   }
 
   outbound_rule {
-    protocol         = "icmp"
+    protocol              = "icmp"
     destination_addresses = ["0.0.0.0/0", "::/0"]
   }
 }
