@@ -1,5 +1,7 @@
 # Intro to DigitalOcean #
 
+![Imgur](https://i.imgur.com/NdWVCBC.jpg)
+
 ## Overview ##
 
 This project will cover the creation of a basic cloud server on a platform called DigitalOcean. This will be accomplished using an IaC technology called Terraform. This project assumes you already have Terraform installed on your machine. If not, check out their offical site at https://developer.hashicorp.com/terraform/install. Though some familiarity would help with understanding Terraform, it is not strictly necessary here. I'll try to explain everything as best I can as we go.
