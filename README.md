@@ -45,19 +45,19 @@ do_token = "[personal_access_token]"
 Once the project is cloned to your local machine and the steps above have been followed, navigate a terminal to the `terraform` directory and initialize the terraform project:
 
 ```shell
-    terraform init
+$ terraform init
 ```
 
 If terraform has been successfully intialized, check the plan by running:
 
 ```shell
-    terraform plan
+$ terraform plan
 ```
 
 If this looks okay, you can spin up the cloud machines any time by applying the plan:
 
 ```shell
-    terraform apply
+$ terraform apply
 ```
 
 You'll have to type `yes` in order to confirm the process. It'll take a little time to create the cloud machine and build up the firewall. But once it's done, the newly-created machine's IP address should be listed in the terminal that ran the terraform as `public_ip_server`. If all goes as expected, your VM is ready for you to ssh into and explore.
@@ -76,6 +76,32 @@ This process creates a VM on Digital Ocean with the following properties:
 
 ---
 
+## Exploring the VM ##
+
+Now to verify that your machine is up and running, you can check it in your Digitalocean dashboard under your project's resources. You can also attempt to SSH into your VM remotely. Just take the `public_ip_server` IPv4 address returned by Terraform and run the command:
+
+```shell
+$ ssh root@public_ip_server
+```
+
+Make sure to type `yes` to add the IP address to the known hosts, which will then allow you to proceed to the VM:
+
+```shell
+Linux iac-test-server 5.10.0-23-amd64 #1 SMP Debian 5.10.179-1 (2023-05-12) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+root@iac-test-server:~#
+```
+
+Congratulations! You now have an active VM that you can explore, use, scale, or tear down whenever you're done. Even better, you now have a proven, reliable method of spinning up a VM whenever you need it simply by running a couple of commands. Eventually we'll look at custom provisioning these VMs for specific use cases, as well as learning more about building a network ifrastructure all from code.
+
+---
+
 ## Destroying the VM ##
 
 To destroy and tear down the infrastructure. Simply use the following command in the terraform directory:
@@ -83,3 +109,5 @@ To destroy and tear down the infrastructure. Simply use the following command in
 ```shell
     terraform destroy
 ```
+
+Any time you want to redeploy the VM, simply run the `terraform plan` and `terraform apply` commands again.
