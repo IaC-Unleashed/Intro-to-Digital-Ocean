@@ -1,3 +1,5 @@
+# file: terraform/variables.tf
+
 variable "do_token" {
   description = "DigitalOcean API Token"
 }

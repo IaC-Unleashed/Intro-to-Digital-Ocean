@@ -113,7 +113,29 @@ Congratulations! You now have an active VM that you can explore, use, scale, or 
 To destroy and tear down the infrastructure. Simply use the following command in the terraform directory:
 
 ```shell
-    terraform destroy
+$ terraform destroy
 ```
 
 Any time you want to redeploy the VM, simply run the `terraform plan` and `terraform apply` commands again.
+
+---
+
+## What Does it All Mean? ##
+
+Let's break down the files in this project for a better holistic view. In addition, each file has been seeded with comments to help with this understanding.
+
+### The *provider.tf* file ###
+
+The `provider.tf` file in Terraform serves as a configuration file specifying the details of the cloud or infrastructure provider you're using. It defines essential settings such as authentication credentials, region, and any other provider-specific configurations required for Terraform to interact with and manage resources on that platform. This file ensures seamless communication between your Terraform scripts and the chosen provider, facilitating the deployment and management of your infrastructure.
+
+### The *resources.tf* file ###
+
+The `resources.tf` file in Terraform is where you declare and define the infrastructure resources that you want to create or manage. It acts as a blueprint for your desired state, specifying the details of each resource, such as type, configuration, and dependencies. This file is crucial for Terraform to understand what components to provision and how to configure them, enabling you to effectively orchestrate and maintain your infrastructure in a consistent and reproducible manner.
+
+### The *variables.tf* file ###
+
+In Terraform, the `variables.tf` file plays a pivotal role in parameterizing your infrastructure configuration. This file allows you to define variables, providing a way to make your Terraform scripts more dynamic and reusable. By parameterizing values such as instance counts, resource names, or configuration details, the `variables.tf` file enhances flexibility, making it easier to adapt and deploy infrastructure across different environments or scenarios. It acts as a central hub for managing input parameters, promoting consistency and simplifying the customization of your Terraform deployments.
+
+### The *terraform.tfvars* file ###
+
+The `terraform.tfvars` file in Terraform serves as a means to assign values to the variables declared in the `variables.tf` file. It acts as a configuration file where you can set specific values for variables, allowing you to customize the behavior of your Terraform scripts without modifying the main infrastructure code. This separation of variables and their values enables easy adjustment of parameters like API keys, instance sizes, or other settings based on the specific requirements of your deployment, promoting flexibility and maintainability in your Terraform configurations.

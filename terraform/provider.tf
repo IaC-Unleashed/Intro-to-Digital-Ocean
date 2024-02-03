@@ -1,3 +1,6 @@
+# file: terraform/provider.tf
+
+# List of required providers for this project
 terraform {
   required_providers {
     digitalocean = {
@@ -7,6 +10,7 @@ terraform {
   }
 }
 
+# Configure the DigitalOcean provider
 provider "digitalocean" {
   token = var.do_token
 }
