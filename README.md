@@ -73,6 +73,7 @@ This process creates a VM on Digital Ocean with the following properties:
 - **Storage:** 50 GB disk
 - **Region:** NYC1
 - **Firewall:** Inbound: SSH, ICMP; Outbound: HTTP, HTTPS, DNS, ICMP
+- **Cost:** $0.018/hour
 
 ---
 
