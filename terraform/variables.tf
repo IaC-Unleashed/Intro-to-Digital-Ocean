@@ -1,22 +1,22 @@
 variable "do_token" {
-  description = "Digitalocean API Token"
+  description = "DigitalOcean API Token"
 }
 
 variable "ssh_key_fingerprint" {
-  description = "Fingerprint of the public key stored on Digitalocean"
+  description = "Fingerprint of the public key stored on DigitalOcean"
 }
 
 variable "ssh_key_name" {
-  description = "Name of the ssh key on Digitalocean"
+  description = "Name of the ssh key on DigitalOcean"
 }
 
 variable "region" {
-  description = "Digitalocean Region"
+  description = "DigitalOcean Region"
   default     = "nyc1"
 }
 
 variable "droplet_image" {
-  description = "Digitalocean droplet image name"
+  description = "DigitalOcean droplet image name"
   default     = "debian-11-x64"
 }
 
