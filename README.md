@@ -60,11 +60,11 @@ If this looks okay, you can spin up the cloud machines any time by applying the 
     terraform apply
 ```
 
-You'll have to type `yes` in order to confirm the process. It'll take a little time to create the cloud machine and build up the firewall. But once it's done, the newly-created machine's IP address should be listed in the terminal that ran the terraform as `public_ip_server`. If all goes as expected, your VM is ready for you to ssh into.
+You'll have to type `yes` in order to confirm the process. It'll take a little time to create the cloud machine and build up the firewall. But once it's done, the newly-created machine's IP address should be listed in the terminal that ran the terraform as `public_ip_server`. If all goes as expected, your VM is ready for you to ssh into and explore.
 
 ---
 
-## Terraform | Machine Details ##
+## VM Details ##
 
 This process creates a VM on Digital Ocean with the following properties:
 
@@ -76,7 +76,7 @@ This process creates a VM on Digital Ocean with the following properties:
 
 ---
 
-## Terraform | Destroying the Machine ##
+## Destroying the VM ##
 
 To destroy and tear down the infrastructure. Simply use the following command in the terraform directory:
 
