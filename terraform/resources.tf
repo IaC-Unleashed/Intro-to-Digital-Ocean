@@ -1,5 +1,5 @@
-data "digitalocean_ssh_key" "razer" {
-  name = "razer"
+data "digitalocean_ssh_key" "do_ssh_key" {
+  name = var.ssh_key_name
 }
 
 data "digitalocean_project" "iac_unleashed" {
@@ -12,7 +12,7 @@ resource "digitalocean_droplet" "iac_test_server" {
   region = var.region
   size   = var.droplet_size
   ssh_keys = [
-    data.digitalocean_ssh_key.razer.id,
+    data.digitalocean_ssh_key.do_ssh_key.id,
   ]
   tags = [
     "test"
