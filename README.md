@@ -77,7 +77,9 @@ This process creates a VM on Digital Ocean with the following properties:
 - **Size:** 1 Intel vCPU, 2 GB Memory
 - **Storage:** 50 GB disk
 - **Region:** NYC1
-- **Firewall:** Inbound: SSH, ICMP; Outbound: HTTP, HTTPS, DNS, ICMP
+- **Firewall Allows:** 
+   - **Inbound:** HTTP, HTTPS, SSH, ICMP
+   - **Outbound:** HTTP, HTTPS, DNS, ICMP
 - **Cost:** $0.018/hour
 
 ---
