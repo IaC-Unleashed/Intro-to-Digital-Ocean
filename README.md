@@ -1,4 +1,4 @@
-# Intro to DigitalOcean #
+# Intro to DigitalOcean and Terraform#
 
 ![Imgur](https://i.imgur.com/NdWVCBC.jpg)
 
