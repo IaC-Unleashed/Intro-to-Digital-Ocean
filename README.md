@@ -138,6 +138,10 @@ The `resources.tf` file in Terraform is where you declare and define the infrast
 
 In Terraform, the `variables.tf` file plays a pivotal role in parameterizing your infrastructure configuration. This file allows you to define variables, providing a way to make your Terraform scripts more dynamic and reusable. By parameterizing values such as instance counts, resource names, or configuration details, the `variables.tf` file enhances flexibility, making it easier to adapt and deploy infrastructure across different environments or scenarios. It acts as a central hub for managing input parameters, promoting consistency and simplifying the customization of your Terraform deployments.
 
+## Up Next ##
+
+Checkout [Intro to Ansible](https://github.com/IaC-Unleashed/Intro-to-Ansible) for instructions on how to configure a droplet with Ansible, after it's been created with Terraform.
+
 ### The *terraform.tfvars* file ###
 
 The `terraform.tfvars` file in Terraform serves as a means to assign values to the variables declared in the `variables.tf` file. It acts as a configuration file where you can set specific values for variables, allowing you to customize the behavior of your Terraform scripts without modifying the main infrastructure code. This separation of variables and their values enables easy adjustment of parameters like API keys, instance sizes, or other settings based on the specific requirements of your deployment, promoting flexibility and maintainability in your Terraform configurations.
