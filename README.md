@@ -4,7 +4,7 @@
 
 ## Overview ##
 
-This project will cover the creation of a basic cloud server on a platform called DigitalOcean. This will be accomplished using an IaC technology called Terraform. This project assumes you already have Terraform installed on your machine. If not, check out Hashicorp's offical installation instructions [here](https://developer.hashicorp.com/terraform/install). Some familiarity with Terraform would help with understanding these instructions, though it is not strictly necessary. I'll try to explain everything as we go, and I'll include a section at the end to better clarify the content of the project files.
+This project will cover the creation of a basic cloud server on an IaaS platform called DigitalOcean. This will be accomplished using an IaC technology called Terraform. This project assumes you already have Terraform installed on your machine. If not, check out Hashicorp's offical installation instructions [here](https://developer.hashicorp.com/terraform/install). Some familiarity with Terraform would help with understanding these instructions, though it is not strictly necessary. I'll try to explain everything as we go, and I'll include a section at the end to better clarify the content of the project files.
 
 The button below is a referal link to DigitalOcean. If you set up an account using it, you'll get $200 in credit over 60 days. And after that, I'll get $25 in credit if you spend $25 or more. Just a small way we can support one another!
 
@@ -18,9 +18,19 @@ DigitalOcean is a cloud hosting provider that offers cloud computing services an
 
 ---
 
+## Clone the Project Repo ##
+
+To follow along, clone this project and move into the `terraform` directory with your terminal.
+
+---
+
 ## The *terraform.tfvars* File ##
 
-Note that the `terraform.tfvars` file does not exist in the repository. This file is protected from version control with `.gitignore`. This file needs to be created in the project's root directory, and the ssh key and personal access token detailed below should be placed inside it. A sample template for this file is included in the repo, as `terraform.tfvars.template`. Simply substiute your own values for the variables (including the brackets), then remove the `.template` extension from the file name.
+Note that the `terraform.tfvars` file does not exist in the repository. This file is protected from version control with `.gitignore`. This file needs to be created in the project's root directory, and the ssh key and personal access token detailed below should be placed inside it. A sample template for this file is included in the repo, as `terraform.tfvars.template`. Simply substiute your own values for the variables (including the brackets), then remove the `.template` extension from the file name. You can achieve this with something like:
+
+```shell
+$ mv terraform.tfvars.template terraform.tfvars
+```
 
 ---
 
