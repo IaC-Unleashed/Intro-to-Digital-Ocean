@@ -4,7 +4,7 @@
 
 ## Overview ##
 
-This project will cover the creation of a basic cloud server on a platform called DigitalOcean. This will be accomplished using an IaC technology called Terraform. This project assumes you already have Terraform installed on your machine. If not, check out Hashicorp's offical installation instructions [here](https://developer.hashicorp.com/terraform/install). Though some familiarity with Terraform would help with understanding these instructions, it is not strictly necessary here. I'll try to explain everything as best I can as we go, and I'll include a section at the end to better clarify the content of this project's files.
+This project will cover the creation of a basic cloud server on a platform called DigitalOcean. This will be accomplished using an IaC technology called Terraform. This project assumes you already have Terraform installed on your machine. If not, check out Hashicorp's offical installation instructions [here](https://developer.hashicorp.com/terraform/install). Some familiarity with Terraform would help with understanding these instructions, though it is not strictly necessary. I'll try to explain everything as we go, and I'll include a section at the end to better clarify the content of the project files.
 
 The button below is a referal link to DigitalOcean. If you set up an account using it, you'll get $200 in credit over 60 days. And after that, I'll get $25 in credit if you spend $25 or more. Just a small way we can support one another!
 
